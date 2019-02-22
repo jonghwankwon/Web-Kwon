@@ -1,0 +1,10 @@
+p {
+  background-color: aliceblue;
+  font-family: Lucida Console;
+  font-size: 10px;
+  color: brown;
+}
+span {
+  font-size: 15px;
+  text-decoration: underline;
+}

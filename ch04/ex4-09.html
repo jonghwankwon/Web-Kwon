@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>셀렉터 만들기</title>
+  <style>
+  h3, li { color: brown; } /* 태그 이름 셀렉터 / h3와 li의 색상 */
+  div > div > strong { background: yellow; } /* 자식 셀렉터 / div stron의 배경 색상 */
+  ul strong { color: dodgerblue; } /* 자손 셀렉터 */
+  .warning { color: red; } /* class 셀렉터 / 텍스트 색상 */
+  body.main { background: : aliceblue; } /* class 셀렉터 /  */
+  #list { background: mistyrose; } /* id 셀렉터 / li의 배경 색상 */
+  #list span { color : forestgreen; }/* 자손 셀렉터 / li의 글 색상 */
+  h3:first-letter { color: black; } /* 가상 클래스 셀렉터 / h3의 첫번째 글자 */
+  li:hover { background: yellowgreen; } /* 가상 클래스 셀렉터 / 마우스오버시 색상 변경*/
+  </style>
+</head>
+<body>
+  <h3>Web Programming</h3>
+  <hr>
+  <div>
+    <div>2학기 <strong>학습 내용</strong>입니다.</div>
+    <ul id="list">
+      <li><span>HTML5</span></li>
+      <li><span>CSS</span></li>
+      <li><span>JAVASRIPT</span></li>
+    </ul>
+    <div class="warning">60점 이하는 F</div>
+  </div>
+</body>
+</html>

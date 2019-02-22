@@ -1,0 +1,23 @@
+.main {
+  background-color:SkyBlue;
+}
+.headline {
+  font-size: 20px;
+  color: darkred;
+  text-align: center;
+}
+.help {
+  font-size: 12px;
+  color:blue;
+}
+
+p.help{
+  color:red;
+  font-size:20px;
+}
+
+#hot{
+  font-size: 12px;
+  background-color: orange;
+  color:blue;
+}

@@ -1,0 +1,41 @@
+body {
+  background-color: aliceblue;
+}
+/*
+header{
+  border-color: black;
+  border-bottom: 1px;
+} */
+h1 {
+  text-align: center;
+  color: brown;
+}
+div {
+  font: nomal 24px verdata;
+}
+
+.multiEffect {
+  color: blue;
+  text-shadow: 2px 2px 2px skyblue,
+    0 0 10px blue, 0 0 5px skyblue;
+}
+
+ul{
+  border: 1px dotted black;
+}
+
+caption {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+p{
+  font-family: "휴먼편지체";
+  font-size: 1em;
+  text-indent: 1em;
+}
+footer{
+  background-color: orange;
+  border-radius: 10px;
+}
