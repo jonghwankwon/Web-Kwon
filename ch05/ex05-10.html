@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>기본 구조를 가진 표 만들기</title>
+  <style>
+  thead th {
+    height: 40px; width: 100px;
+  }
+  td, th {
+    width: 100px; height: 20px;
+  }
+  table {
+    border: 1px solid blue;
+    border: collapse : collapse;
+  }
+  td, th{
+    border: 1px dotted green;
+  }
+  </style>
+</head>
+<body>
+  <h3>1학기 성적</h3>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>HTML</th>
+        <th>CSS</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>합</th>
+        <th>175</th>
+        <th>169</th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th>황기태</th>
+        <th>80</th>
+        <th>70</th>
+      </tr>
+      <tr>
+        <th>이재문</th>
+        <th>95</th>
+        <th>99</th>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

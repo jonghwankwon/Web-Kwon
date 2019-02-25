@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>display 프로퍼티</title>
+  <style>
+    div {
+      border: 2px solid yellowgreen;
+      color: blue;
+      background: aliceblue;
+    }
+
+    span {
+      border: 2px dotted red;
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>인라인, 인라인 블록, 블록</h3>
+  나는 <div style="display:none">
+    div(none)</div>입니다.<br><br>
+  나는 <div style="display:inline">
+    div(inline)</div>입니다.<br><br>
+  나는 <div style="display:inline-block; height:50px">
+    div(inline-block)</div>입니다.<br><br>
+  나는 <div>div <span style="display:block">
+      div(block)</span>입니다.
+  </div>
+</body>
+
+</html>
