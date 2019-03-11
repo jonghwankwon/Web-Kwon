@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Date 객채로 경과 시간 알아내기</title>
+
+  <head>
+
+  <body>
+    <h3>Date 객채로 경과 시간 알아내기</h3>
+    <hr>
+    <script>
+      var start = new Date();
+      var sum = 0;
+      for (var i=0; i<=10000; i++)
+        sum += i;
+      var end = new Date();
+      var elapsedTime = end.getTime() - start.getTime();
+      document.write("경과 시간: " + elapsedTime + "밀리초<br>");
+    </script>
+
+  </body>
+
+</html>
+</body>
+
+</html>

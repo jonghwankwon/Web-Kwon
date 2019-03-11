@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>openchallenge7</title>
+</head>
+
+<body>
+  <h3>openchallenge7</h3>
+  <hr>
+  <script>
+    var input = prompt("이름을 ','로 분리하여 입력하세요.");
+    document.write(input + "<br><hr>");
+    var i, k, duplicated;
+    var names = input.split(",");
+    var newNames = new Array();
+    newNames[0] = names[0].trim();
+    for (i = 1; i < names.length; i++) {
+      duplicated = false;
+      for (k = 0; k < newNames.length; k++) {
+        if (names[i].indexOf(newNames[k]) >= 0) {
+          duplicated = true;
+          break;
+        }
+      }
+      if (!duplicated)
+        newNames[k] = names[i].trim();
+    }
+    newNames.sort();
+    document.write("1) 중복 이름을 제거한 후 오름차순 정렬<br>")
+    for (i = 0; i < newNames.length; i++)
+      document.write("&nbsp;&nbsp;&nbsp;" + newNames[i] + "<br>");
+    document.write("<hr>")
+
+    var lastNames = new Array();
+    var lastCount = new Array();
+    lastNames[0] = newNames[0].charAt(0);
+    lastCount[0] = 1;
+
+    for (i = 1; i < newNames.length; i++) {
+      duplicated = false;
+      for (k = 0; k < lastNames.length; k++) {
+        if (newNames[i].charAt(0) == lastNames[k]) {
+          lastCount[k]++;
+          duplicated = true;
+          break;
+        }
+      }
+
+      if (!duplicated) {
+        lastNames[k] = newNames[i].charAt(0);
+        lastCount[k] = 1;
+      }
+    }
+
+    document.write("2) 입력한 이름중 성씨와 횟수<br>")
+    for (i = 0; i < lastNames.length; i++)
+      document.write("&nbsp;&nbsp;&nbsp;" + lastNames[i] +
+        " - " + lastCount[i] + "<br>");
+    document.write("<hr>")
+  </script>
+  </script>
+</body>
+
+</html>

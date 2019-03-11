@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>사용자 입력 처리</title>
+
+  <head>
+
+  <body>
+    <h3>사용자 입력 처리</h3>
+    <hr>
+    <script> // 입력한 이름을 오름차순으로 출력 ,로 분리 후 array sort로 출력
+      var input = prompt("이름을 ','로 분리하여 입력하세요.");
+      document.write(input + "<br><hr>");
+      var names = input.split(",");
+      names.sort();
+      for (var i = 0; i < names.length; i++)
+        document.write(names[i] + "<br>");
+    </script>
+  </body>
+
+</html>
+</body>
+
+</html>
