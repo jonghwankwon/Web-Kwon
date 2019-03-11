@@ -1,0 +1,22 @@
+header {
+  text-align: center;
+}
+
+ul {
+  width: auto;
+  height: 40px;
+  background: skyblue;
+  list-style: none;
+}
+
+ul li {
+  float: left;
+  margin-right: 50px
+}
+
+ul li a {
+  font-size: 25px;
+  color: darkred;
+  font-weight: bold;
+  text-decoration: none
+}
