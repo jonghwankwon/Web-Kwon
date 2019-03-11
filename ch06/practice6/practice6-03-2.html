@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>document.write()</title>
+</head>
+
+<body>
+  <script>
+    document.write("<h3>document.write()로 만들기</h3>");
+    document.write("<hr>");
+    document.write("<table border='1'>");
+    document.write("<tbody>");
+
+    document.write("<tr>");
+    document.write("<th>");
+    document.write("n");
+    for (var i = 0; i <= 9; i++) {
+      document.write("<td>");
+      document.write(i);
+      document.write("</td>");
+    }
+    document.write("</th>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<th>");
+
+    document.write("n<sup>2</sup>");
+    for (var i = 0; i <= 9; i++) {
+      document.write("<td>");
+      document.write(i * i);
+      document.write("</td>");
+    }
+    document.write("</th>");
+    document.write("</tr>");
+    document.write("<tbody>");
+
+    document.write("</table>");
+  </script>
+
+</body>
+
+</html>

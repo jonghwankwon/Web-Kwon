@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>onblur와 onfocus</title>
+  <script>
+    function drawImage()
+  {
+      var found = null;
+      var sel = document.getElementsByName("fruits"); // fruits 이름을 가진 모든 태그를 찾는 코드
+      var img = document.getElementById("fruitimage"); // 찾고자하는 id 값을 찾는 코드
+
+      for(var i=0; i<sel.length; i++)
+      {
+          if(sel[i].checked == true)
+          {
+              found = sel[i];
+              break;
+          }
+      }
+      img.src = found.value;
+  }
+  </script>
+</head>
+
+<body onload="drawImage()">
+  <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+  <hr>
+  <form>
+    <input type="radio" name="fruits" value="media/banana.png" onchange="drawImage()">바나나
+    <input type="radio" name="fruits" value="media/mango.png" onchange="drawImage()">망고
+    <input type="radio" name="fruits" value="media/apple.png" checked onchange="drawImage()">사과
+    <br>
+    </select>
+    <img id="fruitimage" src="media/apple.png">
+  </form>
+</body>
+
+</html>

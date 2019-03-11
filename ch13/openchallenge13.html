@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>정규표현식을 이용한 회원가입 유효성 체크</title>
+  <style>
+  table {
+  width: 60%;
+  text-align: left;
+  margin: center;
+  }
+  td {
+    width: 250px;
+    height: 50px;
+  }
+</style>
+  <script>
+    function validate() {
+       var re = /^[a-zA-Z0-9]{4,12}$/ // 아이디와 패스워드가 적합한지 검사할 정규식
+       var regExp = /^\d{3}-\d{3,4}-\d{4}$/; //휴대폰번호가 적합한지 검사할 정규식
+       var regExp2 = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i; //이메일주소가 적합한지 검사할 정규식
+
+       var id = document.getElementById("id");
+       var passwd = document.getElementById("passwd");
+       var email = document.getElementById("email");
+       var phone = document.getElementById("phone");
+
+      //아이디
+       if(!check(re,id,"아이디는 4~12자의 영문 대소문자와 숫자로만 입력")) {
+           return false;
+       }
+      //패스워드
+       if(!check(re,passwd,"패스워드는 4~12자의 영문 대소문자와 숫자로만 입력")) {
+           return false;
+       }
+      //패스워드 확인
+       if(join.passwd.value != join.checkpasswd.value) {
+           alert("비밀번호가 다릅니다. 다시 확인해 주세요.");
+           join.checkpasswd.value = "";
+           join.checkpasswd.focus();
+           return false;
+       }
+      //이메일
+       if(email.value=="") {
+           alert("이메일을 입력해 주세요");
+           email.focus();
+           return false;
+       }
+      //이메일 확인
+       if(!check(regExp2, email, "적합하지 않은 이메일 형식입니다.")) {
+           return false;
+       }
+       //휴대폰
+        if(phone.value=="") {
+            alert("휴대폰번호를 입력해 주세요");
+            phone.focus();
+            return false;
+        }
+      //휴대폰 확인
+       if(!check(regExp,phone,"휴대전화 번호가 올바르지 않습니다.")) {
+           return false;
+       }
+
+       alert("회원가입이 완료되었습니다.");
+   }
+   function check(re, what, message) {
+    if(re.test(what.value)) {
+        return true;
+    }
+    alert(message);
+    what.value = "";
+    what.focus();
+    //return false;
+}
+</script>
+</head>
+
+<body>
+  <h3>정규표현식을 이용한 회원가입 유효성 체크</h3>
+  <hr>
+  <form name="join" onsubmit="return validate()" ;>
+    <tbody>
+      <table border="1" align="center">
+        <tr align="center">
+          <td colspan="2" style="background:yellowgreen;">
+            <font color="white"><b>회원기본정보</b></font>
+          </td>
+        </tr>
+        <tr>
+          <td><b>아이디:</b></td>
+          <td><input type="text" placeholder="4-12자의 영문 대소문자와 숫자로만 입력" style="width:250px;" id="id" name="id" maxlength="12">
+          </td>
+        </tr>
+        <tr>
+          <td><b>비밀번호:</b></td>
+          <td><input type="password" placeholder="4-12자의 영문 대소문자와 숫자로만 입력" style="width:250px" id="passwd" maxlength="12"></td><br>
+        </tr>
+        <tr>
+          <td><b>비밀번호 확인:</b></td>
+          <td><input type="password" placeholder="비밀번호 재확인" style="width:250px" id="checkpasswd" maxlength="12" /></td>
+        </tr>
+        <tr>
+          <td><b>메일주소:</b></td>
+          <td><input type="text" placeholder="rnjswhd12@naver.com" style="width:250px" id="email"></td>
+        </tr>
+        <tr>
+          <td><b>휴대전화:</b></td>
+          <td><input type="text" placeholder="010-0000-0000" style="width:250px" id="phone"></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><button onclick="">유효성 검사</button></td>
+        </tr>
+    </tbody>
+    </table>
+  </form>
+</body>
+
+</html>
+
+</body>
+
+</html>

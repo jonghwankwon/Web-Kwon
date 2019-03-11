@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>break 문</title>
+</head>
+
+<body>
+  <h3>1에서 얼마까지 더해야 입력한 n값을 넘는가?</h3>
+  <hr>
+  <script>
+    var sum=0;
+    for(var i=1; i<=10; i++) { //  i가 1에서 10까지 반복
+      if(i%3 !=1) // 3으로 나눈 나머지가 1이 아닌 경우
+      continue; // 다음 반복으로 점프(i++ 코드로)
+      document.write(i + " ");
+      sum += i;
+    }
+    document.write("합은" + sum);
+  </script>
+</body>
+
+</html>

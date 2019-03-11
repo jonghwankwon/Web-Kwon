@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트로 오디오 제어</title>
+</head>
+
+<body>
+  <h3>자바스크립트로 오디오 제어</h3>
+  <hr>
+  <audio id="audio" src="media/EmbraceableYou.mp3"></audio>
+  <div id="msg">오디오 제어 메시지 출력</div>
+  <button id="play" onclick="control(event)">play</button>
+  <button id="pause" onclick="control(event)">pause</button>
+  <button id="replay" onclick="control(event)">replay</button>
+  <button id="vol-" onclick="control(event)">vol-</button>
+  <button id="vol+" onclick="control(event)">vol+</button>
+  <button id="mute on/off" onclick="control(event)">mute on/off</button>
+  <script>
+    var div = document.getElementById("msg");
+    var audio = document.getElementById("audio");
+
+    function control(e) {
+      var id = e.target.id;
+      switch (id) {
+        case "play":
+          audio.play(); // 재생
+          audio.volume = 0.5;
+          div.innerHTML = audio.src + "재생합니다.";
+          break;
+
+        case "pause":
+          audio.pause(); // 일시 중지
+          div.innerHTML = "일시중지되었습니다.";
+          break;
+
+        case "replay":
+          audio.pause(); // 일시 중지
+          div.innerHTML = "일시중지되었습니다.";
+          break;
+
+        case "vol-":
+          audio.volume -= 0.1; // 음량 0.1 감소
+          if (audio.volume < 0.1) audio.volume = 0;
+          div.innerHTML = "음량 0.1 감소." + "현재 " + audio.volume;
+          break;
+
+        case "vol+":
+          audio.volume += 0.1; // 음량 0.1 증가
+          if (audio.volume > 0.9) audio.volume = 1.0;
+          div.innerHTML = "음량 0.1 증가." + "현재 " + audio.volume;
+          break;
+        case "mude on/off":
+          audio.muted = !audio.muted; // 음소거 토글
+          if (audio.muted) div.innerHTML = "음소거";
+          else div.innerHTML = "음소거 해제";
+      }
+    }
+  </script>
+</body>
+
+</html>

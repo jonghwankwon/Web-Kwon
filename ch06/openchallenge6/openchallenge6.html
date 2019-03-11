@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>openchallenge6</title>
+</head>
+
+<body>
+  <h3>별 문자 출력하기</h3>
+  <hr>
+  <script>
+    for (var i = 0; i <= 5; i++) {
+      for (var k = 0; k <= i; k++) {
+        document.write("*");
+      }
+      document.write("<br>");
+    }
+
+    for (var x = 5; x > 0; x--) {
+      for (var a = 5; a >= x; a--) {
+        document.write("&nbsp");
+      }
+      for (var y = 0; y < x; y++) {
+        document.write("*");
+      }
+      document.write("<br>");
+    }
+  </script>
+</body>
+
+</html>
